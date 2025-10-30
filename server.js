@@ -18,7 +18,7 @@ const RouteTalla = require('./src/routes/tallaRoutes.js');
 class Server {
   constructor() {
     this.app = express();
-    this.port = APP_PORT;
+    this.port = process.env.PORT || 5000;
 
     // Middlewares principales
     this.app.use(express.json()); 
